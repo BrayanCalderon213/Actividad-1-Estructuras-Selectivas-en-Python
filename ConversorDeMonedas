@@ -1,0 +1,72 @@
+"""
+Programa: Conversor de monedas con constantes
+Descripción: Convierte pesos mexicanos a 10 monedas diferentes usando constantes 
+al inicio y una estructura match-case.
+"""
+
+# Constantes con las tasas de cambio (referencias aproximadas desde MXN)
+TASA_USD = 0.058
+TASA_EUR = 0.053
+TASA_THB = 2.10
+TASA_JPY = 8.90
+TASA_KRW = 78.50
+TASA_AUD = 0.088
+TASA_PEN = 0.22
+TASA_CAD = 0.081
+TASA_VES = 2.15
+TASA_ARS = 58.00
+
+print("--- Conversor de Pesos Mexicanos (MXN) a Otras Monedas ---")
+
+# 1. Solicitar la cantidad en pesos mexicanos
+pesos_mxn = float(input("Ingresa la cantidad en pesos mexicanos (MXN): "))
+
+# 2. Mostrar el menú de opciones del 1 al 10
+print("\nElige la moneda de destino:")
+print("1. Dólar (USD)")
+print("2. Euro (EUR)")
+print("3. Bath (THB)")
+print("4. Yen (JPY)")
+print("5. Won (KRW)")
+print("6. Dólar Australiano (AUD)")
+print("7. Sol (PEN)")
+print("8. Dólar Canadiense (CAD)")
+print("9. Bolívar (VES)")
+print("10. Peso Argentino (ARS)")
+
+opcion = int(input("\nIngresa el número de tu opción (1 - 10): "))
+
+# 3. Usar match-case utilizando las constantes definidas arriba
+match opcion:
+    case 1:
+        resultado = pesos_mxn * TASA_USD
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a ${resultado:.2f} USD")
+    case 2:
+        resultado = pesos_mxn * TASA_EUR
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a €{resultado:.2f} EUR")
+    case 3:
+        resultado = pesos_mxn * TASA_THB
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a ฿{resultado:.2f} THB")
+    case 4:
+        resultado = pesos_mxn * TASA_JPY
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a ¥{resultado:.2f} JPY")
+    case 5:
+        resultado = pesos_mxn * TASA_KRW
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a ₩{resultado:.2f} KRW")
+    case 6:
+        resultado = pesos_mxn * TASA_AUD
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a ${resultado:.2f} AUD")
+    case 7:
+        resultado = pesos_mxn * TASA_PEN
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a S/.{resultado:.2f} PEN")
+    case 8:
+        resultado = pesos_mxn * TASA_CAD
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a ${resultado:.2f} CAD")
+    case 9:
+        resultado = pesos_mxn * TASA_VES
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a Bs.{resultado:.2f} VES")
+    case 10:
+        resultado = pesos_mxn * TASA_ARS
+        print(f"\nResultado: ${pesos_mxn:.2f} MXN equivalen a ${resultado:.2f} ARS")
+    case _:
+        print("\nError: Opción no válida. Debes elegir un número entre 1 y 10.")

@@ -1,0 +1,22 @@
+"""
+Programa: Buscador de información sencillo
+Descripción: Permite al usuario ingresar un tema y muestra información básica 
+utilizando una estructura match-case.
+"""
+
+print("--- Buscador Sencillo ---")
+tema = input("Ingresa un tema (Shakira, Inception, Spiderman, Adele, Matrix): ").strip()
+
+match tema:
+    case "Shakira":
+        print("-> Cantante colombiana de pop latino, famosa mundialmente por éxitos como 'Hips Don't Lie' y 'Waka Waka'.")
+    case "Inception":
+        print("-> Película de ciencia ficción y suspenso de 2010, dirigida por Christopher Nolan y protagonizada por Leonardo DiCaprio.")
+    case "Spiderman":
+        print("-> Película de superhéroes de Marvel sobre Peter Parker, un joven que adquiere poderes de araña y protege Nueva York.")
+    case "Adele":
+        print("-> Cantante británica de soul y pop, célebre por su potente voz y álbumes titulados con números como '21' y '25'.")
+    case "Matrix":
+        print("-> Película de ciencia ficción de 1999 sobre un hacker que descubre que el mundo real es una simulación virtual.")
+    case _:
+        print("-> Lo siento, no tengo información sobre ese tema.")

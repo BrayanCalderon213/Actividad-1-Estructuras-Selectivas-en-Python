@@ -1,0 +1,35 @@
+"""
+Programa: Cálculo de precio con descuento
+Descripción: Calcula el precio final de un producto aplicando un porcentaje 
+de descuento variable según su precio original, utilizando estructuras if-elif-else.
+"""
+
+print("--- Calculadora de Precios con Descuento ---")
+
+# Entrada de datos (usamos float para manejar decimales/centavos)
+precio_original = float(input("Ingresa el precio original del producto: "))
+
+# Validación inicial de precio positivo
+if precio_original < 0:
+    print("Error: El precio no puede ser un valor negativo.")
+else:
+    # Estructura if-elif-else ordenada de mayor a menor
+    if precio_original > 500:
+        porcentaje_descuento = 0.25  # 25%
+    elif precio_original > 200:
+        porcentaje_descuento = 0.20  # 20%
+    elif precio_original > 100:
+        porcentaje_descuento = 0.10  # 10%
+    else:
+        porcentaje_descuento = 0.00  # Sin descuento
+        
+    # Proceso: cálculo del descuento y precio final
+    monto_descuento = precio_original * porcentaje_descuento
+    precio_final = precio_original - monto_descuento
+    
+    # Salida de resultados con f-strings y formato de dos decimales
+    print("\n--- Resumen de Compra ---")
+    print(f"Precio original: ${precio_original:.2f}")
+    print(f"Descuento aplicado: {int(porcentaje_descuento * 100)}%")
+    print(f"Monto ahorrado: ${monto_descuento:.2f}")
+    print(f"Precio final a pagar: ${precio_final:.2f}")

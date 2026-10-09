@@ -1,0 +1,26 @@
+"""
+Programa: Determinación de la estación del año
+Descripción: Recibe un número de mes (1 - 12) y determina la estación 
+correspondiente utilizando una estructura match-case.
+"""
+
+print("--- Determinador de Estaciones del Año ---")
+
+# Entrada de datos convirtiéndola a entero
+mes = int(input("Ingresa el número del mes (1 - 12): "))
+
+# Estructura match-case agrupando los meses con el operador de barra (|)
+match mes:
+    case 3 | 4 | 5:
+        estacion = "Primavera"
+    case 6 | 7 | 8:
+        estacion = "Verano"
+    case 9 | 10 | 11:
+        estacion = "Otoño"
+    case 12 | 1 | 2:
+        estacion = "Invierno"
+    case _:
+        estacion = "Error: Número de mes inválido (debe ser entre 1 y 12)."
+
+# Salida del resultado
+print(f"Estación: {estacion}")

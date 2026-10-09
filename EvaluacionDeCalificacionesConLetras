@@ -1,0 +1,28 @@
+"""
+Programa: Evaluación de calificaciones con letras
+Descripción: Recibe una calificación numérica y asigna una letra (A, B, C, D, F) 
+utilizando una estructura if-elif-else ordenada de mayor a menor.
+"""
+
+def evaluar_calificacion():
+    print("--- Conversor de Calificación Numérica a Letra ---")
+    
+    # Entrada de datos (usamos float por si la calificación tiene decimales)
+    calificacion = float(input("Ingresa la calificación (0 a 100): "))
+    
+    # Estructura condicional ordenada de la más alta a la más baja
+    if calificacion < 0 or calificacion > 100:
+        print("Error: La calificación debe estar en el rango de 0 a 100.")
+    elif calificacion >= 90:
+        print(f"Calificación: {calificacion} -> Letra: A")
+    elif calificacion >= 80:
+        print(f"Calificación: {calificacion} -> Letra: B")
+    elif calificacion >= 70:
+        print(f"Calificación: {calificacion} -> Letra: C")
+    elif calificacion >= 60:
+        print(f"Calificación: {calificacion} -> Letra: D")
+    else:
+        print(f"Calificación: {calificacion} -> Letra: F")
+
+if __name__ == "__main__":
+    evaluar_calificacion()

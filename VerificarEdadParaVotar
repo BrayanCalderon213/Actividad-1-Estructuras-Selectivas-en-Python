@@ -1,0 +1,16 @@
+"""
+Programa: Verificador de Edad para Votar
+Descripción: Determina si una persona es elegible para votar basándose en su edad,
+validando también que la entrada sea un número lógico y no negativo.
+"""
+
+EDAD_MINIMA_VOTAR = 18
+
+edad = int(input("Ingresa tu edad: "))
+
+if edad < 0 or edad > 100:
+    print("Error: Ingresa una edad válida.")
+elif edad >= EDAD_MINIMA_VOTAR:
+    print("¡Sí eres elegible para votar!")
+else:
+    print("Aún no eres elegible para votar.")
