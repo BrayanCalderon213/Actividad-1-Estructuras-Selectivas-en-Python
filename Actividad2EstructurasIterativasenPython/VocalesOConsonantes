@@ -1,0 +1,29 @@
+"""
+Programa: Vocales o consonantes
+Descripción: Solicita al usuario ingresar letras de forma continua y determina 
+si cada una es una vocal o consonante, deteniéndose cuando se ingresa un espacio.
+"""
+
+print("--- Vocales o Consonantes ---")
+print("Ingresa letras una por una. (Escribe un espacio ' ' para terminar).\n")
+
+# Ciclo while que se repite hasta que el usuario ingrese un espacio
+while True:
+  letra = input("Ingresa una letra: ")
+
+  # Verificar si la entrada es un espacio para terminar
+  if letra == " ":
+    print("\n¡Programa finalizado!")
+    break
+
+  # Validar que sea un solo carácter alfabético
+  if len(letra) == 1 and letra.isalpha():
+    # Convertir a minúscula para facilitar la comparación
+    letra_min = letra.lower()
+
+    if letra_min in "aeiou":
+      print(f"'{letra}' es una vocal.\n")
+    else:
+      print(f"'{letra}' es una consonante.\n")
+  else:
+    print("Error: Por favor, ingresa únicamente una sola letra o un espacio.\n")

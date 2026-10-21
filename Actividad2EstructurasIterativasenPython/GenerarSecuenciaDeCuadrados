@@ -1,0 +1,26 @@
+"""
+Programa: Secuencia de cuadrados
+Descripción: Solicita un número entero positivo y muestra los cuadrados 
+de todos los números desde 1 hasta ese número utilizando un bucle do-while simulado.
+"""
+
+print("--- Secuencia de Cuadrados ---")
+
+# 1. Solicitar el número al usuario
+limite = int(input("Ingresa un número entero positivo: "))
+
+# Inicializar el contador
+actual = 1
+
+# 2. Simular un ciclo do-while
+while True:
+  # Mostrar el cuadrado del número actual
+  print(f"El cuadrado de {actual} es: {actual ** 2}")
+
+  # Incrementar el contador
+  actual += 1
+
+  # Condición para romper el ciclo
+  if actual > limite:
+    break
+  

@@ -1,0 +1,26 @@
+"""
+Programa: Secuencia aritmética
+Descripción: Genera una secuencia aritmética solicitando un primer número, 
+una diferencia y un número máximo, utilizando un bucle do-while simulado.
+"""
+
+print("--- Secuencia Aritmética ---")
+
+# 1. Solicitar los datos al usuario
+actual = int(input("Ingresa el primer número: "))
+diferencia = int(input("Ingresa la diferencia: "))
+maximo = int(input("Ingresa el número máximo: "))
+
+print("\nSecuencia:")
+
+# 2. Simular un ciclo do-while
+while True:
+  print(actual)
+
+  # Actualizar el valor sumando la diferencia
+  actual += diferencia
+
+  # Condición para romper el ciclo si se pasa del máximo
+  if actual > maximo:
+    break
+  

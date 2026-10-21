@@ -1,0 +1,32 @@
+"""
+Programa: Conteo de Números
+Descripción: Pide una cantidad de números y cuenta cuántos son positivos, 
+negativos o ceros usando un ciclo for y la estructura if-elif-else.
+"""
+
+print("--- Conteo de Números ---")
+
+# 1. Solicitar cuántos números se van a evaluar
+cantidad = int(input("¿Cuántos números vas a ingresar?: "))
+
+# Inicializar los contadores
+mayores = 0
+menores = 0
+iguales = 0
+
+# 2. Pedir y clasificar cada número
+for i in range(cantidad):
+  numero = float(input(f"Ingresa el número {i + 1}: "))
+
+  if numero > 0:
+    mayores += 1
+  elif numero < 0:
+    menores += 1
+  else:
+    iguales += 1
+
+# 3. Mostrar el resultado
+print("\n--- Resultados ---")
+print(f"Mayores que 0: {mayores}")
+print(f"Menores que 0: {menores}")
+print(f"Iguales a 0: {iguales}")
